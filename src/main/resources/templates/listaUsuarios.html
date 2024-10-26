@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Estudiantes</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/listaUsuarios.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center">Lista de Estudiantes</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iteración de usuarios usando Thymeleaf -->
+        <tr th:each="usuario : ${usuarios}">
+            <td th:text="${usuario[0]}">Nombre</td>
+            <td th:text="${usuario[1]}">Apellido</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- JavaScript (al final para cargar más rápido) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
